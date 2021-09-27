@@ -1,0 +1,50 @@
+<canvas id= 'tablero' width?500 height=450></canvas>
+<script>
+
+function cuadrado (cd, colorBorde,colorRelleno, grosor){
+ctx.beginPath();
+ctx.strokeStyle = colorBorde;
+ctx.fillStyle = colorRelleno;
+ctx.lineWidth = grosor;
+ctx.moveTo(cd[0],cd[1]);
+ctx.lineTo(cd[2],cd[3]);
+ctx.lineTo(cd[4],cd[5]);
+ctx.lineTo(cd[6],cd[7]);
+ctx.closePath();
+ctx.stroke();
+ctx.fill();
+
+}
+
+function pentagono (cd, colorBorde,colorRelleno, grosor){
+ctx.beginPath();
+ctx.strokeStyle = colorBorde;
+ctx.fillStyle = colorRelleno;
+ctx.lineWidth = grosor;
+ctx.moveTo(cd[0],cd[1]);
+ctx.lineTo(cd[2],cd[3]);
+ctx.lineTo(cd[4],cd[5]);
+ctx.lineTo(cd[6],cd[7]);
+ctx.lineTo(cd[8],cd[9]);
+ctx.closePath();
+ctx.stroke();
+ctx.fill();
+
+}
+
+
+
+
+
+var c= document.getElementById('tablero')
+var ctx= c.getContext('2d')
+
+
+</script>
+
+
+
+
+
+
+
