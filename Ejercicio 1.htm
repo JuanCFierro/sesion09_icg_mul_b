@@ -1,7 +1,7 @@
-<canvas id= 'tablero' width?500 height=450></canvas>
+<canvas id= 'tablero' width=2000 height=2000></canvas>
 <script>
 
-function cuadrado (cd, colorBorde,colorRelleno, grosor){
+function rectangulo (cd, colorBorde,colorRelleno, grosor){
 ctx.beginPath();
 ctx.strokeStyle = colorBorde;
 ctx.fillStyle = colorRelleno;
@@ -32,6 +32,14 @@ ctx.fill();
 
 }
 
+function recorte(arr){
+ctx.beginPath();
+ctx.moveTo(arr[0],arr[1]);
+for (var i=2; i<arr.lengyh; i+=2)
+ctx.lineTo(arr[i],arr[i+1]);
+ctx.clip();
+
+}
 
 
 
@@ -39,12 +47,16 @@ ctx.fill();
 var c= document.getElementById('tablero')
 var ctx= c.getContext('2d')
 
+var RecVerde=[12,118,2,159,452,241,456,199], PenAzul=[123,119,286,5,450,119,387,308,185,309],
+    PenBlanco=[150,131,252,58,353,131,315,252,188,253], CirBlanco=(172, 157, 150, 0, 2 * Math.PI);
+
+    
+
+rectangulo(RecVerde, 'green', 'green');
+pentagono(PenAzul, 'blue', 'blue');
+pentagono(PenBlanco, 'White', 'White');
+rectangulo(RecVerde, 'green', 'green');
+
+
 
 </script>
-
-
-
-
-
-
-
